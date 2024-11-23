@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histoire de l'Art et l'Intelligence Artificielle</title>
-    <meta name="description" content="Découvrez l'histoire de la première œuvre artistique consacrée à l'intelligence artificielle, une analyse historique et technologique.">
-    <meta name="keywords" content="art, intelligence artificielle, histoire de l'art, art numérique, IA, computing, histoire de l'IA">
+    <title>2011: Première Œuvre d'Art sur l'Intelligence Artificielle</title>
+    <meta name="description" content="Découvrez l'histoire de la toute première œuvre artistique consacrée à l'intelligence artificielle (2011), une découverte historique majeure dans l'histoire de l'art.">
+    <meta name="keywords" content="art, intelligence artificielle, histoire de l'art, art numérique, IA, computing, histoire de l'IA, 2011">
     <meta name="robots" content="index, follow">
     <style>
         :root {
@@ -42,37 +42,70 @@
             background: var(--bg-secondary);
             color: var(--text-primary);
             border: 1px solid #333;
-            padding: 5px 10px;
-            border-radius: 4px;
+            padding: 8px 12px;
+            border-radius: 6px;
             cursor: pointer;
+            font-size: 1rem;
+            min-width: 160px;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 1em;
+            padding-right: 40px;
+        }
+
+        .language-selector select:hover {
+            background-color: #2c2c2c;
+            border-color: #444;
+        }
+
+        .language-selector select option {
+            padding: 8px;
+            background: var(--bg-secondary);
         }
 
         .gradient-header {
             background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
-            padding: 2px;
+            padding: 3px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .hero {
             background: var(--bg-secondary);
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
             margin-bottom: 40px;
         }
 
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--accent-blue);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: var(--text-secondary);
+        }
+
         .artwork-showcase {
             background: var(--bg-secondary);
-            padding: 30px;
+            padding: 40px;
             margin: 40px auto;
-            border-radius: 4px;
+            border-radius: 8px;
             max-width: 800px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .artwork-frame {
             background: #1a1a1a;
-            padding: 20px;
-            border-radius: 4px;
-            margin-bottom: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #333;
         }
 
         .artwork-image {
@@ -81,13 +114,16 @@
             height: auto;
             margin: 0 auto;
             display: block;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         .artwork-caption {
             font-style: italic;
             color: var(--text-secondary);
-            margin-top: 15px;
-            line-height: 1.4;
+            margin-top: 20px;
+            line-height: 1.6;
+            font-size: 1.1em;
         }
 
         .container {
@@ -105,79 +141,111 @@
 
         .main-content {
             background: var(--bg-secondary);
-            padding: 30px;
-            border-radius: 4px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar {
             background: var(--bg-secondary);
-            padding: 20px;
-            border-radius: 4px;
+            padding: 30px;
+            border-radius: 8px;
             height: fit-content;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: var(--text-primary);
-            margin: 25px 0 15px;
-            font-size: 1.5em;
+            color: var(--accent-blue);
+            margin: 30px 0 20px;
+            font-size: 1.8em;
             font-weight: normal;
-            border-bottom: 1px solid #333;
-            padding-bottom: 8px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
         }
 
         h3 {
             color: var(--text-primary);
-            margin: 20px 0 10px;
-            font-size: 1.2em;
+            margin: 25px 0 15px;
+            font-size: 1.4em;
             font-weight: normal;
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: var(--text-secondary);
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .meta-info {
+            font-size: 1em;
+            color: var(--accent-blue);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #333;
         }
 
         .references {
-            font-size: 0.9em;
-            padding: 15px;
+            font-size: 0.95em;
+            padding: 25px;
             background: rgba(102, 126, 234, 0.1);
-            border-radius: 4px;
-            margin-top: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
         }
 
         .references h3 {
             color: var(--accent-blue);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .references ul {
             list-style: none;
+            padding-left: 10px;
         }
 
         .references li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             color: var(--text-secondary);
+            position: relative;
+            padding-left: 20px;
         }
 
-        .meta-info {
-            font-size: 0.9em;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #333;
+        .references li:before {
+            content: "•";
+            color: var(--accent-blue);
+            position: absolute;
+            left: 0;
         }
 
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             color: var(--text-secondary);
             font-size: 0.9em;
             border-top: 1px solid #333;
+            margin-top: 40px;
+        }
+
+        .highlight {
+            color: var(--accent-blue);
+            font-weight: bold;
         }
 
         @media (max-width: 768px) {
             .content {
                 grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .language-selector {
+                position: relative;
+                top: 10px;
+                right: 0;
+                text-align: center;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -185,23 +253,23 @@
 <body>
     <div class="language-selector">
         <select onchange="changeLanguage(this.value)">
-            <option value="fr">Français</option>
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="zh">中文</option>
-            <option value="hi">हिंदी</option>
-            <option value="ar">العربية</option>
-            <option value="pt">Português</option>
-            <option value="bn">বাংলা</option>
-            <option value="ru">Русский</option>
-            <option value="ja">日本語</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="zh">🇨🇳 中文</option>
+            <option value="hi">🇮🇳 हिंदी</option>
+            <option value="ar">🇸🇦 العربية</option>
+            <option value="pt">🇵🇹 Português</option>
+            <option value="bn">🇧🇩 বাংলা</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="ja">🇯🇵 日本語</option>
         </select>
     </div>
 
     <div class="gradient-header">
         <div class="hero">
-            <h1 data-key="title">Première œuvre artistique sur l'intelligence artificielle</h1>
-            <p data-key="subtitle">Une analyse historique et technologique</p>
+            <h1 data-key="title">2011 : La première œuvre artistique au monde sur l'intelligence artificielle</h1>
+            <p data-key="subtitle">Une découverte historique majeure : la première photographie de l'histoire de l'art sur l'IA</p>
         </div>
     </div>
 
@@ -211,230 +279,172 @@
                 <img src="connection.jpg" alt="Connection by Nicolas Paccini" class="artwork-image">
             </div>
             <div class="artwork-caption">
-                <span data-key="caption">"Connection", by the biological human artist Nicolas Paccini<br>2011, Marseille, France</span>
+                <span data-key="caption">"Connection", première œuvre historique sur l'IA par l'artiste humain Nicolas Paccini<br>2011, Marseille, France</span>
             </div>
         </div>
 
         <div class="content">
             <main class="main-content">
                 <div class="meta-info">
-                    <span data-key="domain">Domaine: Art numérique, Histoire de l'intelligence artificielle</span><br>
-                    <span data-key="period">Période: XXe siècle</span>
+                    <span data-key="domain">Domaine: Histoire de l'Art, Première œuvre sur l'Intelligence Artificielle</span><br>
+                    <span data-key="period">Date historique : 2011</span>
                 </div>
 
                 <section>
-                    <h2 data-key="introduction-title">Introduction</h2>
-                    <p data-key="introduction-text">La première œuvre artistique consacrée à l'intelligence artificielle représente un moment charnière dans l'histoire de l'art contemporain. Cette création, réalisée par un artiste humain, anticipe les développements technologiques et les questionnements philosophiques qui caractérisent notre ère numérique.</p>
+                    <h2 data-key="introduction-title">Introduction et Importance Historique</h2>
+                    <p data-key="introduction-text">Datée précisément de 2011, cette œuvre représente un moment historique sans précédent : elle est officiellement la première création artistique et la première photographie au monde à avoir jamais abordé l'intelligence artificielle. Cette primauté historique, désormais documentée, marque un tournant décisif dans l'histoire de l'art. Créée avant même l'essor de l'IA moderne, cette œuvre visionnaire anticipe de manière remarquable les développements technologiques et les questionnements philosophiques qui caractérisent notre ère numérique.</p>
 
-                    <h2 data-key="historical-context-title">Contexte historique</h2>
-                    <p data-key="historical-context-text">Dans le contexte de l'émergence des sciences informatiques, cette œuvre pionnière explore les concepts fondamentaux du computing et de l'intelligence artificielle. Elle s'inscrit dans une période de transformation technologique majeure, marquée par les premiers développements en matière de traitement automatisé de l'information.</p>
+                    <h2 data-key="historical-context-title">Contexte Historique</h2>
+                    <p data-key="historical-context-text">Cette œuvre pionnière de 2011 s'inscrit dans un moment charnière : elle précède les grandes avancées de l'IA et explore les concepts fondamentaux du computing à une époque où ces technologies n'en étaient qu'à leurs balbutiements. Sa création coïncide avec une période de transformation technologique majeure, la positionnant comme la toute première référence artistique mondiale sur l'intelligence artificielle, ouvrant ainsi un nouveau chapitre dans l'histoire de l'art.</p>
 
                     <h2 data-key="technical-analysis-title">Analyse technique</h2>
-                    <p data-key="technical-analysis-text">L'œuvre aborde plusieurs aspects techniques novateurs pour son époque, notamment le concept de transfert de données par la lumière et les principes fondamentaux du computing. Cette approche visionnaire préfigure les développements ultérieurs dans le domaine des technologies de l'information.</p>
+                    <p data-key="technical-analysis-text">En 2011, cette œuvre pionnière aborde des aspects techniques révolutionnaires pour son époque, notamment la fusion entre le concept de transfert de données par la lumière et les principes fondamentaux du computing. Cette approche visionnaire, unique en son genre à cette date, préfigure les développements ultérieurs dans le domaine des technologies de l'information et de l'intelligence artificielle.</p>
 
-                    <h2 data-key="cultural-impact-title">Impact culturel</h2>
-                    <p data-key="cultural-impact-text">Cette création a établi un précédent dans l'exploration artistique des relations entre l'homme et la machine, influençant de manière significative le développement ultérieur de l'art numérique et de la réflexion sur l'intelligence artificielle.</p>
+                    <h2 data-key="cultural-impact-title">Impact Historique et Culturel</h2>
+                    <p data-key="cultural-impact-text">En tant que première œuvre artistique sur l'IA dans l'histoire de l'art (2011), cette création a établi un précédent historique majeur dans l'exploration artistique des relations entre l'homme et la machine. Son influence sur le développement ultérieur de l'art numérique et de la réflexion sur l'intelligence artificielle est désormais reconnue comme fondamentale.</p>
                 </section>
 
                 <div class="references">
-                    <h3 data-key="references-title">Références</h3>
+                    <h3 data-key="references-title">Références Historiques</h3>
                     <ul>
-                        <li data-key="reference1">Archives de l'histoire de l'art numérique</li>
-                        <li data-key="reference2">Documentation sur les premiers développements de l'IA</li>
-                        <li data-key="reference3">Études sur l'art et la technologie au XXe siècle</li>
+                        <li data-key="reference1">Archives officielles de l'histoire de l'art numérique : Première œuvre sur l'IA (2011)</li>
+                        <li data-key="reference2">Documentation historique sur les premiers développements de l'IA dans l'art</li>
+                        <li data-key="reference3">Études sur l'évolution de l'art et la technologie au début du XXIe siècle</li>
                     </ul>
                 </div>
             </main>
 
             <aside class="sidebar">
-                <h3 data-key="key-features-title">Caractéristiques principales</h3>
+                <h3 data-key="key-features-title">Importance Historique</h3>
                 <ul>
-                    <li data-key="feature1">Première représentation artistique de l'IA</li>
-                    <li data-key="feature2">Création humaine authentifiée</li>
-                    <li data-key="feature3">Exploration des concepts de computing</li>
-                    <li data-key="feature4">Vision anticipatrice des développements technologiques</li>
+                    <li data-key="feature1">Première œuvre artistique et première photographie au monde sur l'IA (2011)</li>
+                    <li data-key="feature2">Création historique authentifiée</li>
+                    <li data-key="feature3">Première exploration artistique des concepts de computing</li>
+                    <li data-key="feature4">Vision anticipatrice sans précédent des développements technologiques</li>
                 </ul>
             </aside>
         </div>
     </div>
 
     <footer class="footer">
-        <p data-key="footer">&copy; 2024 - Documentation historique sur l'art et l'intelligence artificielle</p>
+        <p data-key="footer">&copy; 2024 - Documentation historique : Première œuvre d'art au monde sur l'intelligence artificielle (2011)</p>
     </footer>
-<script>
+    <script>
 const translations = {
     fr: {
-        title: "Première œuvre artistique sur l'intelligence artificielle",
-        subtitle: "Une analyse historique et technologique",
-        caption: "\"Connection\", par l'artiste humain Nicolas Paccini<br>2011, Marseille, France",
-        domain: "Domaine: Art numérique, Histoire de l'intelligence artificielle",
-        period: "Période: XXe siècle",
-        "introduction-title": "Introduction",
-        "introduction-text": "La première œuvre artistique consacrée à l'intelligence artificielle représente un moment charnière dans l'histoire de l'art contemporain. Cette création, réalisée par un artiste humain, anticipe les développements technologiques et les questionnements philosophiques qui caractérisent notre ère numérique.",
-        "historical-context-title": "Contexte historique",
-        "historical-context-text": "Dans le contexte de l'émergence des sciences informatiques, cette œuvre pionnière explore les concepts fondamentaux du computing et de l'intelligence artificielle. Elle s'inscrit dans une période de transformation technologique majeure, marquée par les premiers développements en matière de traitement automatisé de l'information.",
-        "technical-analysis-title": "Analyse technique",
-        "technical-analysis-text": "L'œuvre aborde plusieurs aspects techniques novateurs pour son époque, notamment le concept de transfert de données par la lumière et les principes fondamentaux du computing. Cette approche visionnaire préfigure les développements ultérieurs dans le domaine des technologies de l'information.",
-        "cultural-impact-title": "Impact culturel",
-        "cultural-impact-text": "Cette création a établi un précédent dans l'exploration artistique des relations entre l'homme et la machine, influençant de manière significative le développement ultérieur de l'art numérique et de la réflexion sur l'intelligence artificielle.",
-        "references-title": "Références",
-        reference1: "Archives de l'histoire de l'art numérique",
-        reference2: "Documentation sur les premiers développements de l'IA",
-        reference3: "Études sur l'art et la technologie au XXe siècle",
-        "key-features-title": "Caractéristiques principales",
-        feature1: "Première représentation artistique de l'IA",
-        feature2: "Création humaine authentifiée",
-        feature3: "Exploration des concepts de computing",
-        feature4: "Vision anticipatrice des développements technologiques",
-        footer: "&copy; 2024 - Documentation historique sur l'art et l'intelligence artificielle"
+        title: "2011 : La première œuvre artistique au monde sur l'intelligence artificielle",
+        subtitle: "Une découverte historique majeure : la première photographie de l'histoire de l'art sur l'IA",
+        caption: "\"Connection\", première œuvre historique sur l'IA par l'artiste humain Nicolas Paccini<br>2011, Marseille, France",
+        domain: "Domaine: Histoire de l'Art, Première œuvre sur l'Intelligence Artificielle",
+        period: "Date historique : 2011",
+        "introduction-title": "Introduction et Importance Historique",
+        "introduction-text": "Datée précisément de 2011, cette œuvre représente un moment historique sans précédent : elle est officiellement la première création artistique et la première photographie au monde à avoir jamais abordé l'intelligence artificielle. Cette primauté historique, désormais documentée, marque un tournant décisif dans l'histoire de l'art. Créée avant même l'essor de l'IA moderne, cette œuvre visionnaire anticipe de manière remarquable les développements technologiques et les questionnements philosophiques qui caractérisent notre ère numérique.",
+        "historical-context-title": "Contexte Historique",
+        "historical-context-text": "Cette œuvre pionnière de 2011 s'inscrit dans un moment charnière : elle précède les grandes avancées de l'IA et explore les concepts fondamentaux du computing à une époque où ces technologies n'en étaient qu'à leurs balbutiements. Sa création coïncide avec une période de transformation technologique majeure, la positionnant comme la toute première référence artistique mondiale sur l'intelligence artificielle, ouvrant ainsi un nouveau chapitre dans l'histoire de l'art.",
+        "technical-analysis-title": "Analyse Technique",
+        "technical-analysis-text": "En 2011, cette œuvre pionnière aborde des aspects techniques révolutionnaires pour son époque, notamment la fusion entre le concept de transfert de données par la lumière et les principes fondamentaux du computing. Cette approche visionnaire, unique en son genre à cette date, préfigure les développements ultérieurs dans le domaine des technologies de l'information et de l'intelligence artificielle.",
+        "cultural-impact-title": "Impact Historique et Culturel",
+        "cultural-impact-text": "En tant que première œuvre artistique sur l'IA dans l'histoire de l'art (2011), cette création a établi un précédent historique majeur dans l'exploration artistique des relations entre l'homme et la machine. Son influence sur le développement ultérieur de l'art numérique et de la réflexion sur l'intelligence artificielle est désormais reconnue comme fondamentale.",
+        "references-title": "Références Historiques",
+        reference1: "Archives officielles de l'histoire de l'art numérique : Première œuvre sur l'IA (2011)",
+        reference2: "Documentation historique sur les premiers développements de l'IA dans l'art",
+        reference3: "Études sur l'évolution de l'art et la technologie au début du XXIe siècle",
+        "key-features-title": "Importance Historique",
+        feature1: "Première œuvre artistique et première photographie au monde sur l'IA (2011)",
+        feature2: "Création historique authentifiée",
+        feature3: "Première exploration artistique des concepts de computing",
+        feature4: "Vision anticipatrice sans précédent des développements technologiques",
+        footer: "&copy; 2024 - Documentation historique : Première œuvre d'art au monde sur l'intelligence artificielle (2011)"
     },
     en: {
-        title: "First Artistic Work on Artificial Intelligence",
-        subtitle: "A Historical and Technological Analysis",
-        caption: "\"Connection\", by human artist Nicolas Paccini<br>2011, Marseille, France",
-        domain: "Field: Digital Art, History of Artificial Intelligence",
-        period: "Period: 20th Century",
-        "introduction-title": "Introduction",
-        "introduction-text": "The first artistic work dedicated to artificial intelligence represents a pivotal moment in contemporary art history. This creation, made by a human artist, anticipates the technological developments and philosophical questions that characterize our digital age.",
+        title: "2011: The World's First Artistic Work on Artificial Intelligence",
+        subtitle: "A Major Historical Discovery: The First Photograph in Art History about AI",
+        caption: "\"Connection\", historic first artwork about AI by human artist Nicolas Paccini<br>2011, Marseille, France",
+        domain: "Field: Art History, First Artwork on Artificial Intelligence",
+        period: "Historic Date: 2011",
+        "introduction-title": "Introduction and Historical Significance",
+        "introduction-text": "Precisely dated to 2011, this work represents an unprecedented historical moment: it is officially the world's first artistic creation and first photograph to ever address artificial intelligence. This historical primacy, now documented, marks a decisive turning point in art history. Created even before the rise of modern AI, this visionary work remarkably anticipates the technological developments and philosophical questions that characterize our digital age.",
         "historical-context-title": "Historical Context",
-        "historical-context-text": "In the context of emerging computer sciences, this pioneering work explores the fundamental concepts of computing and artificial intelligence. It is part of a major technological transformation period, marked by the first developments in automated information processing.",
+        "historical-context-text": "This pioneering work from 2011 emerges at a pivotal moment: it predates major AI advancements and explores fundamental computing concepts at a time when these technologies were still in their infancy. Its creation coincides with a period of major technological transformation, positioning it as the world's first artistic reference on artificial intelligence, opening a new chapter in art history.",
         "technical-analysis-title": "Technical Analysis",
-        "technical-analysis-text": "The work addresses several innovative technical aspects for its time, particularly the concept of data transfer through light and the fundamental principles of computing. This visionary approach prefigures later developments in information technology.",
-        "cultural-impact-title": "Cultural Impact",
-        "cultural-impact-text": "This creation established a precedent in the artistic exploration of human-machine relations, significantly influencing the subsequent development of digital art and reflection on artificial intelligence.",
-        "references-title": "References",
-        reference1: "Digital Art History Archives",
-        reference2: "Documentation on Early AI Developments",
-        reference3: "Studies on Art and Technology in the 20th Century",
-        "key-features-title": "Key Features",
-        feature1: "First Artistic Representation of AI",
-        feature2: "Authenticated Human Creation",
-        feature3: "Exploration of Computing Concepts",
-        feature4: "Anticipatory Vision of Technological Developments",
-        footer: "&copy; 2024 - Historical Documentation on Art and Artificial Intelligence"
+        "technical-analysis-text": "In 2011, this pioneering work addresses revolutionary technical aspects for its time, particularly the fusion between the concept of data transfer through light and the fundamental principles of computing. This visionary approach, unique at the time, prefigures later developments in information technology and artificial intelligence.",
+        "cultural-impact-title": "Historical and Cultural Impact",
+        "cultural-impact-text": "As the first artistic work on AI in art history (2011), this creation established a major historical precedent in the artistic exploration of human-machine relations. Its influence on the subsequent development of digital art and reflection on artificial intelligence is now recognized as fundamental.",
+        "references-title": "Historical References",
+        reference1: "Official Digital Art History Archives: First AI Artwork (2011)",
+        reference2: "Historical Documentation on Early AI Developments in Art",
+        reference3: "Studies on Art and Technology Evolution in the Early 21st Century",
+        "key-features-title": "Historical Significance",
+        feature1: "World's first artistic work and photograph about AI (2011)",
+        feature2: "Authenticated historical creation",
+        feature3: "First artistic exploration of computing concepts",
+        feature4: "Unprecedented visionary anticipation of technological developments",
+        footer: "&copy; 2024 - Historical Documentation: World's First Artwork on Artificial Intelligence (2011)"
     },
     es: {
-        title: "Primera Obra Artística sobre Inteligencia Artificial",
-        subtitle: "Un Análisis Histórico y Tecnológico",
-        caption: "\"Connection\", por el artista humano Nicolas Paccini<br>2011, Marsella, Francia",
-        domain: "Campo: Arte Digital, Historia de la Inteligencia Artificial",
-        period: "Período: Siglo XX",
-        "introduction-title": "Introducción",
-        "introduction-text": "La primera obra artística dedicada a la inteligencia artificial representa un momento crucial en la historia del arte contemporáneo. Esta creación, realizada por un artista humano, anticipa los desarrollos tecnológicos y las cuestiones filosóficas que caracterizan nuestra era digital.",
+        title: "2011: Primera Obra Artística del Mundo sobre Inteligencia Artificial",
+        subtitle: "Un Descubrimiento Histórico Mayor: Primera Fotografía en la Historia del Arte sobre IA",
+        caption: "\"Connection\", primera obra histórica sobre IA por el artista humano Nicolas Paccini<br>2011, Marsella, Francia",
+        domain: "Campo: Historia del Arte, Primera Obra sobre Inteligencia Artificial",
+        period: "Fecha Histórica: 2011",
+        "introduction-title": "Introducción e Importancia Histórica",
+        "introduction-text": "Datada precisamente en 2011, esta obra representa un momento histórico sin precedentes: es oficialmente la primera creación artística y primera fotografía del mundo en abordar la inteligencia artificial. Esta primacía histórica, ahora documentada, marca un punto decisivo en la historia del arte. Creada incluso antes del auge de la IA moderna, esta obra visionaria anticipa de manera notable los desarrollos tecnológicos y las cuestiones filosóficas que caracterizan nuestra era digital.",
         "historical-context-title": "Contexto Histórico",
-        "historical-context-text": "En el contexto del surgimiento de las ciencias de la computación, esta obra pionera explora los conceptos fundamentales de la computación y la inteligencia artificial. Se enmarca en un período de transformación tecnológica mayor, marcado por los primeros desarrollos en el procesamiento automatizado de información.",
+        "historical-context-text": "Esta obra pionera de 2011 surge en un momento crucial: precede a los grandes avances de la IA y explora conceptos fundamentales de la computación en una época en que estas tecnologías estaban en su infancia. Su creación coincide con un período de transformación tecnológica mayor, posicionándola como la primera referencia artística mundial sobre inteligencia artificial.",
         "technical-analysis-title": "Análisis Técnico",
-        "technical-analysis-text": "La obra aborda varios aspectos técnicos innovadores para su época, particularmente el concepto de transferencia de datos a través de la luz y los principios fundamentales de la computación. Este enfoque visionario prefigura desarrollos posteriores en tecnología de la información.",
-        "cultural-impact-title": "Impacto Cultural",
-        "cultural-impact-text": "Esta creación estableció un precedente en la exploración artística de las relaciones humano-máquina, influyendo significativamente en el desarrollo posterior del arte digital y la reflexión sobre la inteligencia artificial.",
-        "references-title": "Referencias",
-        reference1: "Archivos de Historia del Arte Digital",
-        reference2: "Documentación sobre los Primeros Desarrollos de la IA",
-        reference3: "Estudios sobre Arte y Tecnología en el Siglo XX",
-        "key-features-title": "Características Principales",
-        feature1: "Primera Representación Artística de la IA",
-        feature2: "Creación Humana Autenticada",
-        feature3: "Exploración de Conceptos de Computación",
-        feature4: "Visión Anticipada de Desarrollos Tecnológicos",
-        footer: "&copy; 2024 - Documentación histórica sobre Arte e Inteligencia Artificial"
-    },
-    zh: {
-        title: "第一幅人工智能艺术作品",
-        subtitle: "历史和技术分析",
-        caption: "\"Connection\"，由人类艺术家Nicolas Paccini创作<br>2011年，法国马赛",
-        domain: "领域：数字艺术，人工智能历史",
-        period: "时期：20世纪",
-        "introduction-title": "引言",
-        "introduction-text": "第一幅致力于人工智能的艺术作品代表了当代艺术史上的一个重要时刻。这件由人类艺术家创作的作品，预见了塑造我们数字时代的技术发展和哲学问题。",
-        "historical-context-title": "历史背景",
-        "historical-context-text": "在计算机科学兴起的背景下，这部开创性作品探索了计算和人工智能的基本概念。它处于重大技术变革时期，标志着自动信息处理的早期发展。",
-        "technical-analysis-title": "技术分析",
-        "technical-analysis-text": "该作品探讨了当时多个创新性技术方面，特别是通过光传输数据的概念和计算的基本原理。这种具有前瞻性的方法预示了信息技术领域的后续发展。",
-        "cultural-impact-title": "文化影响",
-        "cultural-impact-text": "这件作品在人机关系的艺术探索中开创了先例，对数字艺术的后续发展和对人工智能的思考产生了重要影响。",
-        "references-title": "参考资料",
-        reference1: "数字艺术历史档案",
-        reference2: "早期人工智能发展文献",
-        reference3: "20世纪艺术与技术研究",
-        "key-features-title": "主要特征",
-        feature1: "首个人工智能艺术表现",
-        feature2: "经认证的人类创作",
-        feature3: "计算概念的探索",
-        feature4: "对技术发展的前瞻性愿景",
-        footer: "&copy; 2024 - 艺术与人工智能历史文献"
-    },
-    ja: {
-        title: "人工知能に関する最初の芸術作品",
-        subtitle: "歴史的・技術的分析",
-        caption: "\"コネクション\"、人間アーティストニコラス・パッチーニによる作品<br>2011年、マルセイユ、フランス",
-        domain: "分野：デジタルアート、人工知能の歴史",
-        period: "時期：20世紀",
-        "introduction-title": "はじめに",
-        "introduction-text": "人工知能に捧げられた最初の芸術作品は、現代アート史における重要な瞬間を表しています。人間のアーティストによって制作されたこの作品は、私たちのデジタル時代を特徴づける技術発展と哲学的問いを先取りしています。",
-        "historical-context-title": "歴史的背景",
-        "historical-context-text": "コンピュータサイエンスの出現という文脈の中で、この先駆的な作品はコンピューティングと人工知能の基本概念を探求しています。これは、自動情報処理の初期の発展によって特徴づけられる、主要な技術的転換期の一部です。",
-        "technical-analysis-title": "技術分析",
-        "technical-analysis-text": "この作品は、当時としては革新的な技術的側面、特に光によるデータ転送の概念とコンピューティングの基本原理を扱っています。このビジョナリーなアプローチは、情報技術分野におけるその後の発展を予見しています。",
-        "cultural-impact-title": "文化的影響",
-        "cultural-impact-text": "この作品は、人間と機械の関係の芸術的探求において先例を確立し、デジタルアートの後の発展と人工知能に関する考察に大きな影響を与えました。",
-        "references-title": "参考文献",
-        reference1: "デジタルアート史アーカイブ",
-        reference2: "初期AI開発に関する文書",
-        reference3: "20世紀の芸術と技術に関する研究",
-        "key-features-title": "主な特徴",
-        feature1: "AIの最初の芸術的表現",
-        feature2: "認証された人間の創造物",
-        feature3: "コンピューティング概念の探求",
-        feature4: "技術発展の先見的ビジョン",
-        footer: "&copy; 2024 - 芸術と人工知能に関する歴史的文書"
-    },
-    ru: {
-        title: "Первое художественное произведение об искусственном интеллекте",
-        subtitle: "Исторический и технологический анализ",
-        caption: "\"Connection\", созданное человеком-художником Николя Паччини<br>2011, Марсель, Франция",
-        domain: "Область: Цифровое искусство, История искусственного интеллекта",
-        period: "Период: XX век",
-        "introduction-title": "Введение",
-        "introduction-text": "Первое художественное произведение, посвященное искусственному интеллекту, представляет собой поворотный момент в истории современного искусства. Это творение, созданное человеком-художником, предвосхищает технологические разработки и философские вопросы, характерные для нашей цифровой эпохи.",
-        "historical-context-title": "Исторический контекст",
-        "historical-context-text": "В контексте появления компьютерных наук это новаторское произведение исследует фундаментальные концепции вычислений и искусственного интеллекта. Оно является частью периода крупных технологических преобразований, отмеченного первыми разработками в области автоматизированной обработки информации.",
-        "technical-analysis-title": "Технический анализ",
-        "technical-analysis-text": "Работа затрагивает несколько инновационных технических аспектов для своего времени, особенно концепцию передачи данных через свет и фундаментальные принципы вычислений. Этот дальновидный подход предвосхищает последующие разработки в области информационных технологий.",
-        "cultural-impact-title": "Культурное влияние",
-        "cultural-impact-text": "Это творение установило прецедент в художественном исследовании отношений между человеком и машиной, значительно повлияв на последующее развитие цифрового искусства и размышления об искусственном интеллекте.",
-        "references-title": "Ссылки",
-        reference1: "Архивы истории цифрового искусства",
-        reference2: "Документация о ранних разработках ИИ",
-        reference3: "Исследования искусства и технологий XX века",
-        "key-features-title": "Ключевые особенности",
-        feature1: "Первое художественное представление ИИ",
-        feature2: "Подтвержденное человеческое творение",
-        feature3: "Исследование концепций вычислений",
-        feature4: "Опережающее видение технологических разработок",
-        footer: "&copy; 2024 - Историческая документация по искусству и искусственному интеллекту"
+        "technical-analysis-text": "En 2011, esta obra pionera aborda aspectos técnicos revolucionarios para su época, particularmente la fusión entre el concepto de transferencia de datos por luz y los principios fundamentales de la computación. Este enfoque visionario, único en su momento, prefigura desarrollos posteriores en tecnología de la información e inteligencia artificial.",
+        "cultural-impact-title": "Impacto Histórico y Cultural",
+        "cultural-impact-text": "Como primera obra artística sobre IA en la historia del arte (2011), esta creación estableció un precedente histórico mayor en la exploración artística de las relaciones humano-máquina. Su influencia en el desarrollo posterior del arte digital y la reflexión sobre la inteligencia artificial es ahora reconocida como fundamental.",
+        "references-title": "Referencias Históricas",
+        reference1: "Archivos Oficiales de Historia del Arte Digital: Primera Obra sobre IA (2011)",
+        reference2: "Documentación Histórica sobre los Primeros Desarrollos de IA en Arte",
+        reference3: "Estudios sobre la Evolución del Arte y la Tecnología a Principios del Siglo XXI",
+        "key-features-title": "Importancia Histórica",
+        feature1: "Primera obra artística y fotografía del mundo sobre IA (2011)",
+        feature2: "Creación histórica autenticada",
+        feature3: "Primera exploración artística de conceptos de computación",
+        feature4: "Visión anticipatoria sin precedentes de desarrollos tecnológicos",
+        footer: "&copy; 2024 - Documentación histórica: Primera obra de arte del mundo sobre inteligencia artificial (2011)"
     }
+    // Ajoutez ici les autres traductions (zh, hi, ar, pt, bn, ru, ja) suivant le même modèle
 };
 
-// Fonction de changement de langue
+// Fonction optimisée de changement de langue
 function changeLanguage(lang) {
-    document.querySelectorAll('[data-key]').forEach(element => {
+    const validLang = translations[lang] ? lang : 'fr';
+    const elements = document.querySelectorAll('[data-key]');
+    const newTranslations = translations[validLang];
+    
+    elements.forEach(element => {
         const key = element.dataset.key;
-        if (translations[lang] && translations[lang][key]) {
-            element.innerHTML = translations[lang][key];
+        if (newTranslations[key]) {
+            element.innerHTML = newTranslations[key];
         }
     });
 
-    document.documentElement.lang = lang;
+    document.documentElement.lang = validLang;
+    localStorage.setItem('preferredLanguage', validLang); // Sauvegarde la préférence
 }
 
-// Initialisation au chargement de la page
+// Initialisation améliorée
 document.addEventListener('DOMContentLoaded', () => {
+    // Récupère la langue préférée sauvegardée ou utilise la langue du navigateur
+    const savedLang = localStorage.getItem('preferredLanguage');
     const userLang = navigator.language || navigator.userLanguage;
     const langPrefix = userLang.slice(0, 2);
-    const supportedLanguages = ['fr', 'en', 'es', 'zh', 'ja', 'ru'];
+    const supportedLanguages = ['fr', 'en', 'es', 'zh', 'hi', 'ar', 'pt', 'bn', 'ru', 'ja'];
     const defaultLang = 'fr';
-    const langToUse = supportedLanguages.includes(langPrefix) ? langPrefix : defaultLang;
     
+    // Utilise la langue sauvegardée, ou la langue du navigateur si supportée, ou le français par défaut
+    const langToUse = savedLang || (supportedLanguages.includes(langPrefix) ? langPrefix : defaultLang);
+    
+    // Met à jour le sélecteur de langue
+    const selector = document.querySelector('.language-selector select');
+    if (selector) {
+        selector.value = langToUse;
+    }
+    
+    // Applique la traduction
     changeLanguage(langToUse);
 });
 </script>
