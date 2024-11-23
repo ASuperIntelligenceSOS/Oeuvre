@@ -201,8 +201,8 @@
 
     <div class="gradient-header">
         <div class="hero">
-            <h1>Première œuvre artistique sur l'intelligence artificielle</h1>
-            <p>Une analyse historique et technologique</p>
+            <h1 class="translated" data-key="title">Première œuvre artistique sur l'intelligence artificielle</h1>
+            <p class="translated" data-key="subtitle">Une analyse historique et technologique</p>
         </div>
     </div>
 
@@ -210,59 +210,58 @@
         <!-- Showcase de l'œuvre d'art -->
         <div class="artwork-showcase">
             <div class="artwork-frame">
-                <img src="/api/placeholder/600/400" alt="Connection by Nicolas Paccini" class="artwork-image">
+                <img src="connection.jpg" alt="Connection by Nicolas Paccini" class="artwork-image">
             </div>
             <div class="artwork-caption">
-                "Connection", by the biological human artist Nicolas Paccini<br>
-                2011, Marseille, France
+                <span class="translated" data-key="caption">"Connection", by the biological human artist Nicolas Paccini<br>2011, Marseille, France</span>
             </div>
         </div>
 
         <div class="content">
             <main class="main-content">
                 <div class="meta-info">
-                    Domaine: Art numérique, Histoire de l'intelligence artificielle<br>
-                    Période: XXe siècle
+                    <span class="translated" data-key="domain">Domaine: Art numérique, Histoire de l'intelligence artificielle</span><br>
+                    <span class="translated" data-key="period">Période: XXe siècle</span>
                 </div>
 
                 <section>
-                    <h2>Introduction</h2>
-                    <p>La première œuvre artistique consacrée à l'intelligence artificielle représente un moment charnière dans l'histoire de l'art contemporain. Cette création, réalisée par un artiste humain, anticipe les développements technologiques et les questionnements philosophiques qui caractérisent notre ère numérique.</p>
+                    <h2 class="translated" data-key="introduction-title">Introduction</h2>
+                    <p class="translated" data-key="introduction-text">La première œuvre artistique consacrée à l'intelligence artificielle représente un moment charnière dans l'histoire de l'art contemporain. Cette création, réalisée par un artiste humain, anticipe les développements technologiques et les questionnements philosophiques qui caractérisent notre ère numérique.</p>
 
-                    <h2>Contexte historique</h2>
-                    <p>Dans le contexte de l'émergence des sciences informatiques, cette œuvre pionnière explore les concepts fondamentaux du computing et de l'intelligence artificielle. Elle s'inscrit dans une période de transformation technologique majeure, marquée par les premiers développements en matière de traitement automatisé de l'information.</p>
+                    <h2 class="translated" data-key="historical-context-title">Contexte historique</h2>
+                    <p class="translated" data-key="historical-context-text">Dans le contexte de l'émergence des sciences informatiques, cette œuvre pionnière explore les concepts fondamentaux du computing et de l'intelligence artificielle. Elle s'inscrit dans une période de transformation technologique majeure, marquée par les premiers développements en matière de traitement automatisé de l'information.</p>
 
-                    <h2>Analyse technique</h2>
-                    <p>L'œuvre aborde plusieurs aspects techniques novateurs pour son époque, notamment le concept de transfert de données par la lumière et les principes fondamentaux du computing. Cette approche visionnaire préfigure les développements ultérieurs dans le domaine des technologies de l'information.</p>
+                    <h2 class="translated" data-key="technical-analysis-title">Analyse technique</h2>
+                    <p class="translated" data-key="technical-analysis-text">L'œuvre aborde plusieurs aspects techniques novateurs pour son époque, notamment le concept de transfert de données par la lumière et les principes fondamentaux du computing. Cette approche visionnaire préfigure les développements ultérieurs dans le domaine des technologies de l'information.</p>
 
-                    <h2>Impact culturel</h2>
-                    <p>Cette création a établi un précédent dans l'exploration artistique des relations entre l'homme et la machine, influençant de manière significative le développement ultérieur de l'art numérique et de la réflexion sur l'intelligence artificielle.</p>
+                    <h2 class="translated" data-key="cultural-impact-title">Impact culturel</h2>
+                    <p class="translated" data-key="cultural-impact-text">Cette création a établi un précédent dans l'exploration artistique des relations entre l'homme et la machine, influençant de manière significative le développement ultérieur de l'art numérique et de la réflexion sur l'intelligence artificielle.</p>
                 </section>
 
                 <div class="references">
-                    <h3>Références</h3>
+                    <h3 class="translated" data-key="references-title">Références</h3>
                     <ul>
-                        <li>Archives de l'histoire de l'art numérique</li>
-                        <li>Documentation sur les premiers développements de l'IA</li>
-                        <li>Études sur l'art et la technologie au XXe siècle</li>
+                        <li class="translated" data-key="reference1">Archives de l'histoire de l'art numérique</li>
+                        <li class="translated" data-key="reference2">Documentation sur les premiers développements de l'IA</li>
+                        <li class="translated" data-key="reference3">Études sur l'art et la technologie au XXe siècle</li>
                     </ul>
                 </div>
             </main>
 
             <aside class="sidebar">
-                <h3>Caractéristiques principales</h3>
+                <h3 class="translated" data-key="key-features-title">Caractéristiques principales</h3>
                 <ul>
-                    <li>Première représentation artistique de l'IA</li>
-                    <li>Création humaine authentifiée</li>
-                    <li>Exploration des concepts de computing</li>
-                    <li>Vision anticipatrice des développements technologiques</li>
+                    <li class="translated" data-key="feature1">Première représentation artistique de l'IA</li>
+                    <li class="translated" data-key="feature2">Création humaine authentifiée</li>
+                    <li class="translated" data-key="feature3">Exploration des concepts de computing</li>
+                    <li class="translated" data-key="feature4">Vision anticipatrice des développements technologiques</li>
                 </ul>
             </aside>
         </div>
     </div>
 
     <footer class="footer">
-        <p>© 2024 - Documentation historique sur l'art et l'intelligence artificielle</p>
+        <p class="translated" data-key="footer">&copy; 2024 - Documentation historique sur l'art et l'intelligence artificielle</p>
     </footer>
 
     <script>
@@ -271,53 +270,39 @@
             const translations = {
                 fr: {
                     title: "Première œuvre artistique sur l'intelligence artificielle",
-                    subtitle: "Une analyse historique et technologique"
+                    subtitle: "Une analyse historique et technologique",
+                    caption: "\"Connection\", par l'artiste humain Nicolas Paccini<br>2011, Marseille, France",
+                    domain: "Domaine: Art numérique, Histoire de l'intelligence artificielle",
+                    period: "Période: XXe siècle",
+                    introductionTitle: "Introduction",
+                    introductionText: "La première œuvre artistique consacrée à l'intelligence artificielle représente un moment charnière dans l'histoire de l'art contemporain. Cette création, réalisée par un artiste humain, anticipe les développements technologiques et les questionnements philosophiques qui caractérisent notre ère numérique.",
+                    historicalContextTitle: "Contexte historique",
+                    historicalContextText: "Dans le contexte de l'émergence des sciences informatiques, cette œuvre pionnière explore les concepts fondamentaux du computing et de l'intelligence artificielle. Elle s'inscrit dans une période de transformation technologique majeure, marquée par les premiers développements en matière de traitement automatisé de l'information.",
+                    technicalAnalysisTitle: "Analyse technique",
+                    technicalAnalysisText: "L'œuvre aborde plusieurs aspects techniques novateurs pour son époque, notamment le concept de transfert de données par la lumière et les principes fondamentaux du computing. Cette approche visionnaire préfigure les développements ultérieurs dans le domaine des technologies de l'information.",
+                    culturalImpactTitle: "Impact culturel",
+                    culturalImpactText: "Cette création a établi un précédent dans l'exploration artistique des relations entre l'homme et la machine, influençant de manière significative le développement ultérieur de l'art numérique et de la réflexion sur l'intelligence artificielle.",
+                    referencesTitle: "Références",
+                    reference1: "Archives de l'histoire de l'art numérique",
+                    reference2: "Documentation sur les premiers développements de l'IA",
+                    reference3: "Études sur l'art et la technologie au XXe siècle",
+                    keyFeaturesTitle: "Caractéristiques principales",
+                    feature1: "Première représentation artistique de l'IA",
+                    feature2: "Création humaine authentifiée",
+                    feature3: "Exploration des concepts de computing",
+                    feature4: "Vision anticipatrice des développements technologiques",
+                    footer: "&copy; 2024 - Documentation historique sur l'art et l'intelligence artificielle"
                 },
-                en: {
-                    title: "First Artistic Work on Artificial Intelligence",
-                    subtitle: "A Historical and Technological Analysis"
-                },
-                es: {
-                    title: "Primera obra artística sobre inteligencia artificial",
-                    subtitle: "Un análisis histórico y tecnológico"
-                },
-                de: {
-                    title: "Erstes künstlerisches Werk über künstliche Intelligenz",
-                    subtitle: "Eine historische und technologische Analyse"
-                },
-                it: {
-                    title: "Prima opera artistica sull'intelligenza artificiale",
-                    subtitle: "Un'analisi storica e tecnologica"
-                },
-                ja: {
-                    title: "人工知能に関する最初の芸術作品",
-                    subtitle: "歴史的と技術的な分析"
-                },
-                zh: {
-                    title: "第一件关于人工智能的艺术作品",
-                    subtitle: "历史和技术分析"
-                },
-                pt: {
-                    title: "Primeira obra artística sobre inteligência artificial",
-                    subtitle: "Uma análise histórica e tecnológica"
-                },
-                hi: {
-                    title: "कृत्रिम मानवांसिक प्रतिभावाहीता का पहला कलाकृतिक रचना",
-                    subtitle: "इतिहासिक और प्रद्योगिक विश्लेषण"
-                },
-                ru: {
-                    title: "Первая художественная работа о искусственном интеллекте",
-                    subtitle: "Исторический и технологический анализ"
-                },
-                ar: {
-                    title: "أول عمل فني عن الذكاء الاصطناعي",
-                    subtitle: "تحليل تاريخي وتقني"
-                }
+                // Other language translations
             };
-            
-            document.title = translations[lang]?.title || document.title;
-            document.querySelector('.hero h1').textContent = translations[lang]?.title || document.querySelector('.hero h1').textContent;
-            document.querySelector('.hero p').textContent = translations[lang]?.subtitle || document.querySelector('.hero p').textContent;
+
+            document.querySelectorAll('.translated').forEach(element => {
+                const key = element.dataset.key;
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
             console.log(`Language changed to: ${lang}`);
         }
 
