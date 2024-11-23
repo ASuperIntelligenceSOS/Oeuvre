@@ -249,22 +249,23 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
 </head>
 <body>
     <div class="language-selector">
-        <select onchange="changeLanguage(this.value)">
-            <option value="fr">🇫🇷 Français</option>
-            <option value="en">🇬🇧 English</option>
-            <option value="es">🇪🇸 Español</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="hi">🇮🇳 हिंदी</option>
-            <option value="ar">🇸🇦 العربية</option>
-            <option value="pt">🇵🇹 Português</option>
-            <option value="bn">🇧🇩 বাংলা</option>
-            <option value="ru">🇷🇺 Русский</option>
-            <option value="ja">🇯🇵 日本語</option>
-        </select>
-    </div>
+    <select onchange="changeLanguage(this.value)">
+        <option value="fr"><span class="flag-icon flag-icon-fr"></span> Français</option>
+        <option value="en"><span class="flag-icon flag-icon-gb"></span> English</option>
+        <option value="es"><span class="flag-icon flag-icon-es"></span> Español</option>
+        <option value="zh"><span class="flag-icon flag-icon-cn"></span> 中文</option>
+        <option value="hi"><span class="flag-icon flag-icon-in"></span> हिंदी</option>
+        <option value="ar"><span class="flag-icon flag-icon-sa"></span> العربية</option>
+        <option value="pt"><span class="flag-icon flag-icon-pt"></span> Português</option>
+        <option value="bn"><span class="flag-icon flag-icon-bd"></span> বাংলা</option>
+        <option value="ru"><span class="flag-icon flag-icon-ru"></span> Русский</option>
+        <option value="ja"><span class="flag-icon flag-icon-jp"></span> 日本語</option>
+    </select>
+</div>
 
     <div class="gradient-header">
         <div class="hero">
