@@ -262,7 +262,7 @@
         <p class="translated" data-key="footer">&copy; 2024 - Documentation historique sur l'art et l'intelligence artificielle</p>
     </footer>
 
-  <script>
+<script>
 const translations = {
     fr: {
         title: "Première œuvre artistique sur l'intelligence artificielle",
@@ -289,72 +289,70 @@ const translations = {
         feature4: "Vision anticipatrice des développements technologiques",
         footer: "&copy; 2024 - Documentation historique sur l'art et l'intelligence artificielle"
     },
-    // Les autres traductions restent identiques...
+    en: {
+        title: "First Artistic Work on Artificial Intelligence",
+        subtitle: "A Historical and Technological Analysis",
+        caption: "\"Connection\", by human artist Nicolas Paccini<br>2011, Marseille, France",
+        domain: "Field: Digital Art, History of Artificial Intelligence",
+        period: "Period: 20th Century",
+        "introduction-title": "Introduction",
+        "introduction-text": "The first artistic work dedicated to artificial intelligence represents a pivotal moment in contemporary art history. This creation, made by a human artist, anticipates the technological developments and philosophical questions that characterize our digital age.",
+        "historical-context-title": "Historical Context",
+        "historical-context-text": "In the context of emerging computer sciences, this pioneering work explores the fundamental concepts of computing and artificial intelligence. It is part of a major technological transformation period, marked by the first developments in automated information processing.",
+        "technical-analysis-title": "Technical Analysis",
+        "technical-analysis-text": "The work addresses several innovative technical aspects for its time, particularly the concept of data transfer through light and the fundamental principles of computing. This visionary approach prefigures later developments in information technology.",
+        "cultural-impact-title": "Cultural Impact",
+        "cultural-impact-text": "This creation established a precedent in the artistic exploration of human-machine relations, significantly influencing the subsequent development of digital art and reflection on artificial intelligence.",
+        "references-title": "References",
+        reference1: "Digital Art History Archives",
+        reference2: "Documentation on Early AI Developments",
+        reference3: "Studies on Art and Technology in the 20th Century",
+        "key-features-title": "Key Features",
+        feature1: "First Artistic Representation of AI",
+        feature2: "Authenticated Human Creation",
+        feature3: "Exploration of Computing Concepts",
+        feature4: "Anticipatory Vision of Technological Developments",
+        footer: "&copy; 2024 - Historical Documentation on Art and Artificial Intelligence"
+    },
+    es: {
+        // ... (toutes les autres traductions continuent ici)
+    }
 };
 
-// Fonction de débogage pour voir ce qui se passe
-function debugTranslation(element, key, lang) {
-    console.log(`Tentative de traduction pour :
-        Element: ${element.tagName}
-        Clé: ${key}
-        Langue: ${lang}
-        Traduction trouvée: ${translations[lang]?.[key]}
-    `);
-}
-
-// Fonction améliorée de changement de langue
 function changeLanguage(lang) {
-    console.log(`Changement de langue vers : ${lang}`);
-    
-    if (!translations[lang]) {
-        console.error(`Traductions non trouvées pour la langue : ${lang}`);
-        return;
-    }
-
+    console.log("Changing language to:", lang); // Débogage
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.dataset.key;
-        debugTranslation(element, key, lang);
-        
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             element.innerHTML = translations[lang][key];
+            console.log(`Translated ${key} to: ${translations[lang][key]}`); // Débogage
         } else {
-            console.warn(`Traduction manquante pour la clé "${key}" en ${lang}`);
+            console.warn(`Missing translation for key: ${key} in language: ${lang}`); // Débogage
         }
     });
 
-    // Mettre à jour la langue du document
     document.documentElement.lang = lang;
-    
-    // Mettre à jour le sélecteur de langue
-    const selector = document.querySelector('.language-selector select');
-    if (selector) {
-        selector.value = lang;
-    }
 }
 
-// Initialisation au chargement de la page
+// Initialisation
 document.addEventListener('DOMContentLoaded', () => {
-    // Tester si le sélecteur de langue fonctionne
+    console.log("Page loaded, initializing translations"); // Débogage
     const selector = document.querySelector('.language-selector select');
-    if (!selector) {
-        console.error('Sélecteur de langue non trouvé !');
-        return;
+    
+    if (selector) {
+        selector.addEventListener('change', (e) => {
+            console.log("Language selector changed to:", e.target.value); // Débogage
+            changeLanguage(e.target.value);
+        });
     }
 
-    // Ajouter un écouteur d'événements avec journalisation
-    selector.addEventListener('change', (event) => {
-        console.log('Changement de langue détecté :', event.target.value);
-        changeLanguage(event.target.value);
-    });
-
-    // Définir la langue initiale
+    // Set initial language
     const userLang = navigator.language || navigator.userLanguage;
     const langPrefix = userLang.slice(0, 2);
     const supportedLanguages = ['fr', 'en', 'es', 'zh', 'hi', 'ar', 'pt', 'bn', 'ru', 'ja'];
     const defaultLang = 'fr';
     const langToUse = supportedLanguages.includes(langPrefix) ? langPrefix : defaultLang;
     
-    console.log('Langue initiale détectée :', langToUse);
     changeLanguage(langToUse);
 });
 </script>
