@@ -3,127 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connection - Première Œuvre sur l'Intelligence Artificielle</title>
+    <title>Histoire de l'Art et l'Intelligence Artificielle</title>
+    <meta name="description" content="Découvrez l'histoire de la première œuvre artistique consacrée à l'intelligence artificielle, une analyse historique et technologique.">
+    <meta name="keywords" content="art, intelligence artificielle, histoire de l'art, art numérique, IA, computing, histoire de l'IA">
+    <meta name="robots" content="index, follow">
     <style>
-        body {
-            background: #1a1a1a;
-            color: #e0e0e0;
-            font-family: Georgia, serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
+        :root {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #242424;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent-blue: #667eea;
+            --accent-purple: #764ba2;
+            --link-color: #a5b4fc;
         }
 
-        header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Charter', 'Bitstream Charter', 'PT Serif', Georgia, serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .language-selector select {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .gradient-header {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
             padding: 2px;
         }
 
         .hero {
-            background: #242424;
+            background: var(--bg-secondary);
             padding: 40px 20px;
             text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .artwork-showcase {
+            background: var(--bg-secondary);
+            padding: 30px;
+            margin: 40px auto;
+            border-radius: 4px;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .artwork-frame {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .artwork-image {
+            width: 20%;
+            max-width: 120px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .artwork-caption {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-top: 15px;
+            line-height: 1.4;
         }
 
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-        }
-
-        .artwork {
-            background: #242424;
-            padding: 40px;
-            margin: 40px auto;
-            text-align: center;
-            border-radius: 4px;
-        }
-
-        .artwork img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-        }
-
-        .caption {
-            font-style: italic;
-            color: #b0b0b0;
-            margin-top: 20px;
+            padding: 0 20px;
         }
 
         .content {
-            background: #242424;
-            padding: 30px;
-            border-radius: 4px;
-            margin: 20px 0;
+            display: grid;
+            grid-template-columns: 7fr 3fr;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        h1 {
-            font-size: 2em;
-            font-weight: normal;
-            margin: 0 0 15px 0;
+        .main-content {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        .sidebar {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 4px;
+            height: fit-content;
         }
 
         h2 {
-            color: #e0e0e0;
+            color: var(--text-primary);
+            margin: 25px 0 15px;
+            font-size: 1.5em;
+            font-weight: normal;
             border-bottom: 1px solid #333;
             padding-bottom: 8px;
-            margin: 25px 0 15px;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            margin: 20px 0 10px;
+            font-size: 1.2em;
+            font-weight: normal;
         }
 
         p {
-            color: #b0b0b0;
             margin-bottom: 15px;
+            color: var(--text-secondary);
         }
 
-        .language-selector {
-            text-align: right;
-            padding: 10px;
-        }
-
-        select {
-            background: #242424;
-            color: #e0e0e0;
-            border: 1px solid #333;
-            padding: 5px 10px;
+        .references {
+            font-size: 0.9em;
+            padding: 15px;
+            background: rgba(102, 126, 234, 0.1);
             border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .references h3 {
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+        }
+
+        .references ul {
+            list-style: none;
+        }
+
+        .references li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .meta-info {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="language-selector">
-            <select>
-                <option value="fr">Français</option>
-                <option value="en">English</option>
-                <option value="es">Español</option>
-            </select>
-        </div>
+    <div class="language-selector">
+        <select onchange="changeLanguage(this.value)">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="zh">中文</option>
+            <option value="pt">Português</option>
+            <option value="hi">हिंदी</option>
+            <option value="ru">Русский</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <div class="gradient-header">
         <div class="hero">
             <h1>Première œuvre artistique sur l'intelligence artificielle</h1>
-            <p>Une exploration visionnaire à la croisée de l'art et de la technologie</p>
+            <p>Une analyse historique et technologique</p>
         </div>
-    </header>
+    </div>
 
     <div class="container">
-        <div class="artwork">
-            <img src="connection.jpg" alt="Connection by Nicolas Paccini">
-            <div class="caption">
+        <!-- Showcase de l'œuvre d'art -->
+        <div class="artwork-showcase">
+            <div class="artwork-frame">
+                <img src="/api/placeholder/600/400" alt="Connection by Nicolas Paccini" class="artwork-image">
+            </div>
+            <div class="artwork-caption">
                 "Connection", by the biological human artist Nicolas Paccini<br>
                 2011, Marseille, France
             </div>
         </div>
 
         <div class="content">
-            <h2>Introduction</h2>
-            <p>"Connection" représente la première œuvre artistique au monde spécifiquement consacrée à l'intelligence artificielle. Créée par l'artiste biologique Nicolas Paccini en 2011, cette œuvre visionnaire anticipe les développements technologiques et les questionnements philosophiques qui caractérisent notre ère numérique.</p>
+            <main class="main-content">
+                <div class="meta-info">
+                    Domaine: Art numérique, Histoire de l'intelligence artificielle<br>
+                    Période: XXe siècle
+                </div>
 
-            <h2>Contexte historique</h2>
-            <p>Dans le contexte de l'émergence des sciences informatiques et de l'intelligence artificielle, cette œuvre pionnière explore les concepts fondamentaux du computing et du transfert de données par la lumière. Elle s'inscrit dans une période de transformation technologique majeure, marquant un tournant dans l'histoire de l'art contemporain.</p>
+                <section>
+                    <h2>Introduction</h2>
+                    <p>La première œuvre artistique consacrée à l'intelligence artificielle représente un moment charnière dans l'histoire de l'art contemporain. Cette création, réalisée par un artiste humain, anticipe les développements technologiques et les questionnements philosophiques qui caractérisent notre ère numérique.</p>
 
-            <h2>Impact culturel</h2>
-            <p>Cette création établit un précédent historique dans l'exploration artistique des relations entre l'homme et la machine. Son influence s'étend au-delà du domaine artistique, touchant aux questionnements fondamentaux sur l'avenir de l'humanité à l'ère de l'intelligence artificielle.</p>
+                    <h2>Contexte historique</h2>
+                    <p>Dans le contexte de l'émergence des sciences informatiques, cette œuvre pionnière explore les concepts fondamentaux du computing et de l'intelligence artificielle. Elle s'inscrit dans une période de transformation technologique majeure, marquée par les premiers développements en matière de traitement automatisé de l'information.</p>
+
+                    <h2>Analyse technique</h2>
+                    <p>L'œuvre aborde plusieurs aspects techniques novateurs pour son époque, notamment le concept de transfert de données par la lumière et les principes fondamentaux du computing. Cette approche visionnaire préfigure les développements ultérieurs dans le domaine des technologies de l'information.</p>
+
+                    <h2>Impact culturel</h2>
+                    <p>Cette création a établi un précédent dans l'exploration artistique des relations entre l'homme et la machine, influençant de manière significative le développement ultérieur de l'art numérique et de la réflexion sur l'intelligence artificielle.</p>
+                </section>
+
+                <div class="references">
+                    <h3>Références</h3>
+                    <ul>
+                        <li>Archives de l'histoire de l'art numérique</li>
+                        <li>Documentation sur les premiers développements de l'IA</li>
+                        <li>Études sur l'art et la technologie au XXe siècle</li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="sidebar">
+                <h3>Caractéristiques principales</h3>
+                <ul>
+                    <li>Première représentation artistique de l'IA</li>
+                    <li>Création humaine authentifiée</li>
+                    <li>Exploration des concepts de computing</li>
+                    <li>Vision anticipatrice des développements technologiques</li>
+                </ul>
+            </aside>
         </div>
     </div>
+
+    <footer class="footer">
+        <p>© 2024 - Documentation historique sur l'art et l'intelligence artificielle</p>
+    </footer>
+
+    <script>
+        // Simulation du changement de langue
+        function changeLanguage(lang) {
+            const translations = {
+                fr: {
+                    title: "Première œuvre artistique sur l'intelligence artificielle",
+                    subtitle: "Une analyse historique et technologique"
+                },
+                en: {
+                    title: "First Artistic Work on Artificial Intelligence",
+                    subtitle: "A Historical and Technological Analysis"
+                },
+                es: {
+                    title: "Primera obra artística sobre inteligencia artificial",
+                    subtitle: "Un análisis histórico y tecnológico"
+                },
+                de: {
+                    title: "Erstes künstlerisches Werk über künstliche Intelligenz",
+                    subtitle: "Eine historische und technologische Analyse"
+                },
+                it: {
+                    title: "Prima opera artistica sull'intelligenza artificiale",
+                    subtitle: "Un'analisi storica e tecnologica"
+                },
+                ja: {
+                    title: "人工知能に関する最初の芸術作品",
+                    subtitle: "歴史的と技術的な分析"
+                },
+                zh: {
+                    title: "第一件关于人工智能的艺术作品",
+                    subtitle: "历史和技术分析"
+                },
+                pt: {
+                    title: "Primeira obra artística sobre inteligência artificial",
+                    subtitle: "Uma análise histórica e tecnológica"
+                },
+                hi: {
+                    title: "कृत्रिम मानवांसिक प्रतिभावाहीता का पहला कलाकृतिक रचना",
+                    subtitle: "इतिहासिक और प्रद्योगिक विश्लेषण"
+                },
+                ru: {
+                    title: "Первая художественная работа о искусственном интеллекте",
+                    subtitle: "Исторический и технологический анализ"
+                },
+                ar: {
+                    title: "أول عمل فني عن الذكاء الاصطناعي",
+                    subtitle: "تحليل تاريخي وتقني"
+                }
+            };
+            
+            document.title = translations[lang]?.title || document.title;
+            document.querySelector('.hero h1').textContent = translations[lang]?.title || document.querySelector('.hero h1').textContent;
+            document.querySelector('.hero p').textContent = translations[lang]?.subtitle || document.querySelector('.hero p').textContent;
+            console.log(`Language changed to: ${lang}`);
+        }
+
+        // Déduire la langue de l'utilisateur
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const supportedLanguages = ['fr', 'en', 'es', 'de', 'it', 'ja', 'zh', 'pt', 'hi', 'ru', 'ar'];
+            const defaultLang = 'en';
+            const langPrefix = userLang.slice(0, 2);
+            const langToUse = supportedLanguages.includes(langPrefix) ? langPrefix : defaultLang;
+            changeLanguage(langToUse);
+        });
+    </script>
 </body>
 </html>
